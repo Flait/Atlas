@@ -1,4 +1,5 @@
 /tools/
+/.idea/
 /apps/admin/node_modules/
 /apps/admin/.nuxt/
 /apps/admin/.output/
