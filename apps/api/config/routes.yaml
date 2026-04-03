@@ -1,0 +1,4 @@
+api_internal_status:
+    path: /internal/status
+    controller: App\Controller\Internal\StatusController
+    methods: [GET]

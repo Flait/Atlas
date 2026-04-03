@@ -1,0 +1,10 @@
+/tools/
+/apps/admin/node_modules/
+/apps/admin/.nuxt/
+/apps/admin/.output/
+/apps/admin/.nuxt-dev.out.log
+/apps/admin/.nuxt-dev.err.log
+/apps/api/vendor/
+/apps/api/var/
+/apps/api/.php-server.out.log
+/apps/api/.php-server.err.log
