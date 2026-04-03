@@ -8,21 +8,46 @@ Build an internal admin and data management platform for operational teams manag
 - venues
 - matching-related data and workflows
 
-## Initial product shape
+## Product Shape
 
-- Internal users only
-- CRUD-style admin workflows will come first
-- The backend should expose internal endpoints tailored to operational workflows
-- The frontend is a private admin application built with Nuxt
+Atlas is an internal admin product first:
 
-## Explicit non-goals for this phase
+- internal users only
+- CRUD and operational workflows come before public-facing capabilities
+- the frontend is a private admin application built with Nuxt
+- the backend is a Symfony server application living in the same monorepo
 
-- No public-facing frontend
-- No finalized domain model
-- No database schema yet
-- No authentication implementation yet
-- No dynamic attribute system yet
+## Repository Direction
 
-## Delivery intent
+Atlas should stay a monorepo:
 
-This repository should start as a clean, minimal skeleton that is easy to evolve without locking us into premature framework or package choices.
+- `apps/api` contains the backend server application
+- `apps/admin` contains the internal admin UI
+- `docs` captures product and architectural decisions
+
+The backend inside `apps/api` should start with a disciplined layered shape from day one, while adding operational complexity only when real requirements justify it.
+
+## Delivery Intent
+
+This repository should remain a clean, explicit base that is easy to evolve:
+
+- monorepo ergonomics at the repository level
+- disciplined backend layering inside `apps/api`
+- operational complexity only when real workflows require it
+- clear separation between internal admin contracts and future public contracts
+
+## Explicit Non-Goals For This Phase
+
+- no public-facing frontend
+- no finalized domain model
+- no database schema yet
+- no authentication implementation yet
+- no dynamic attribute system yet
+- no attempt to reproduce a large operational backend footprint before it is justified
+
+## First Meaningful Milestones
+
+- establish the first real backend module using `Presentation / Application / Domain / Infrastructure` boundaries
+- establish the first admin workflow in `apps/admin`
+- add tests around the first internal API contract
+- introduce persistence and auth only once the first concrete workflow is agreed
