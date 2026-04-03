@@ -163,6 +163,11 @@ Atlas should keep a clear separation of test intent while keeping the test stack
 
 The first test to add should cover an internal HTTP action and the corresponding application endpoint boundary.
 
+Current repository baseline now includes this guardrail on the status module:
+
+- HTTP action test for `/internal/status` in `tests/Action/Internal`
+- application endpoint test for status endpoint in `tests/Application/Endpoint/Internal`
+
 ## Monorepo Implication
 
 `apps/admin` and `apps/api` should evolve independently but stay coordinated at the repository level:

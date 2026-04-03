@@ -1,4 +1,3 @@
-api_internal_status:
-    path: /internal/status
-    controller: App\Controller\Internal\StatusController
-    methods: [GET]
+internal_http_actions:
+    resource: '../src/Presentation/Http/Action/'
+    type: attribute

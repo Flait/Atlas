@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Application\Internal;
+namespace App\Application\Endpoint\Internal;
 
-final class GetStatusHandler
+final class GetStatusEndpoint
 {
     public function handle(): array
     {

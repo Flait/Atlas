@@ -97,6 +97,7 @@ The root [Makefile](./Makefile) provides the common workspace commands:
 make install
 make api-serve
 make admin-serve
+make check
 ```
 
 ### Backend
@@ -131,17 +132,18 @@ npm run dev
 
 ## Current State
 
-After installing dependencies, the current skeleton is intentionally small and runnable:
+After installing dependencies, the current baseline is intentionally small and runnable:
 
 - backend serves from `apps/api/public`
 - frontend serves from `apps/admin`
-- only a minimal internal status endpoint exists so far
+- first reference backend module now uses `Presentation/Http/Action` -> `Application/Endpoint`
+- admin homepage now consumes `/internal/status` from the internal API contract
 
 The documentation describes the intended direction for the first real modules, not a promise that the current skeleton already contains the full target structure.
 
 ## Next Steps
 
-- add the first real module in `apps/api` using the target layer split
-- introduce the first admin flow in `apps/admin` that consumes internal API data
-- add backend tests for HTTP action and application endpoint boundaries
+- expand modules after the reference status module pattern
+- add richer admin flows that consume internal API contracts
+- keep extending backend tests for HTTP action and application endpoint boundaries
 - introduce authentication and persistence only when the first concrete workflow requires them

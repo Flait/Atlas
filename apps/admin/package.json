@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
+    "check": "nuxt typecheck",
     "preview": "nuxt preview"
   },
   "dependencies": {

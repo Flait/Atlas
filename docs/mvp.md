@@ -47,7 +47,7 @@ This repository should remain a clean, explicit base that is easy to evolve:
 
 ## First Meaningful Milestones
 
-- establish the first real backend module using `Presentation / Application / Domain / Infrastructure` boundaries
-- establish the first admin workflow in `apps/admin`
-- add tests around the first internal API contract
+- establish the first real backend module using `Presentation / Application / Domain / Infrastructure` boundaries ✅ (status reference module)
+- establish the first admin workflow in `apps/admin` ✅ (status contract read flow)
+- add tests around the first internal API contract ✅ (action + application tests)
 - introduce persistence and auth only once the first concrete workflow is agreed
